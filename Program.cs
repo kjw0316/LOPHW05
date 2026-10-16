@@ -10,9 +10,33 @@ namespace NumArray
             int oddNum = 0;
             int maxNum = 0;
 
-            int input = int.Parse(Console.ReadLine());
+            int input;
+            int[] numArray;
 
-            int[] numArray = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            while (true)
+            {
+                input = int.Parse(Console.ReadLine());
+                if (input >= 1 && input <= 1000)
+                    break;
+                else
+                    Console.WriteLine($"다시 입력하세요.");
+            }
+            while (true)
+            {
+                numArray = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+                for(int i = 0; i < numArray.Length; i++)
+                {
+                    if (numArray[i] <= 10000 && numArray[i] >= -10000)
+                    {
+                        break;
+                    }
+                }
+                if (numArray.Length == input)
+                    break;
+                else
+                    Console.WriteLine($"다시 입력하세요.");
+            }
+
 
             for (int i = 0; i < numArray.Length; i++)
             {
