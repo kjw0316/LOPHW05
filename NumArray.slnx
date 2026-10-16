@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../ContinueNumAdd/ContinueNumAdd.csproj" />
   <Project Path="NumArray.csproj" />
 </Solution>

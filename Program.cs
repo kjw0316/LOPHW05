@@ -24,17 +24,18 @@ namespace NumArray
             while (true)
             {
                 numArray = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-                for(int i = 0; i < numArray.Length; i++)
-                {
-                    if (numArray[i] <= 10000 && numArray[i] >= -10000)
-                    {
-                        break;
-                    }
-                }
                 if (numArray.Length == input)
                     break;
                 else
                     Console.WriteLine($"다시 입력하세요.");
+                for (int i = 0; i < numArray.Length; i++)
+                {
+                    if (numArray[i] <= 10000 && numArray[i] >= -10000)
+                        break;
+                    else
+                        Console.WriteLine("다시 입력하세요.");
+                }
+                
             }
 
 
